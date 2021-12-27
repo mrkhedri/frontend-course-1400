@@ -1,0 +1,4 @@
+https://w3schools.com/
+https://stackoverflow.com/
+https://github.com/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
