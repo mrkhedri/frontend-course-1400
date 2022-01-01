@@ -1,0 +1,50 @@
+body {
+    background-color: #dddddd;
+    /*background-image: url("https://cdn1.vectorstock.com/i/1000x1000/05/40/rgb-color-wheel-from-dark-to-light-on-black-vector-35310540.jpg");*/
+}
+
+h1, h2 {
+    font-size: 20px;
+    font-family: Verdana;
+}
+
+h2.heading {
+    font-size: 25px;
+}
+
+.color-white {
+    color: white;
+}
+
+/*
+rgb = (255, 255, 255)
+hex = 0 1 2 3 4 5 6 7 8 9 a b c d e f
+
+00 11 22
+r  g  b
+
+#000000 -> black
+#fffff -> white
+#ff0000 -> red
+
+*/
+
+.test {
+    background-color: #191256 !important;
+    font-weight: bold;
+    text-align: left;
+}
+
+.test {
+    background-color: purple;
+}
+
+#test2 {
+    background-color: pink;
+}
+
+body div.test span {
+    color: aqua;
+}
+
+
