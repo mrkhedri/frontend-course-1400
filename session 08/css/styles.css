@@ -1,0 +1,202 @@
+@import url(fontiran.css);
+@import url(reset.css);
+
+/* global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: IRANSans, serif;
+    color: #333;
+    height: 3000px; /* TODO: Should be remove in production */
+}
+
+.wrapper {
+
+}
+
+.container {
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* header */
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    margin-bottom: 150px;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .right .title {
+    font-weight: bold;
+    margin-left: 16px;
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+:hover
+:active
+:focus
+
+*/
+
+.header .right nav {
+
+}
+
+.header .right ul {
+    display: flex;
+}
+
+.header .right ul li {
+}
+
+.header .right ul li a {
+    padding: 0 8px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* :hover */
+.header .right ul li a.active, .header .right ul li a:hover {
+    border-bottom: 2px #93bb58 solid;
+}
+
+.header .left {
+
+}
+
+.header .left .tel {
+    margin-left: 12px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.header .left .google {
+    text-decoration: none;
+    background-color: #93bb58;
+    color: #fff;
+    padding: 2px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* heading */
+.heading {
+    margin-bottom: 100px;
+}
+
+.heading h1 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 33px;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-flex;
+}
+
+.heading .bird {
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+}
+
+.heading h2 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+/* first post */
+.first-post {
+    margin-bottom: 30px;
+}
+
+.first-post .last-article {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+.first-post .box {
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 12px 12px 12px 120px;
+    position: relative;
+}
+
+.first-post .bicycle {
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 0;
+}
+
+.first-post img {
+    border-radius: 12px;
+}
+
+.first-post .left {
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first-post .date-and-author {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 65px;
+}
+
+.first-post .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #171717;
+}
+
+.first-post .desc {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.first-post .link {
+    text-decoration: none;
+    background-color: #93bb58;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: background-color 250ms;
+}
+
+.first-post .link:hover {
+    background-color: #395503;
+}
+
+
+
