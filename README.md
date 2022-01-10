@@ -1,6 +1,6 @@
 # frontend Course 1400
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/slate/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/slate/actions/workflows/ci.yaml)
+[![.github/workflows/ci.yaml](https://github.com/pages-themes/slate/actions/workflows/ci.yaml/badge.svg)](https://github.com/mrkhedri/frontend-course-1400/actions/workflows/pages/pages-build-deployment)
 
 *Teaching by MohammadReza and Anis*
 
