@@ -253,6 +253,15 @@ a {
     /*overflow-X: auto;*/
     display: flex;
     /*justify-content: center;*/
+    position: relative;
+}
+
+section.slideList::after {
+    content: "";
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    box-shadow: inset -100px 0 50px #fff;
 }
 
 .slide-btn {
