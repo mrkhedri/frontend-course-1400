@@ -15,7 +15,6 @@ body {
     padding-top: 169px;
 }
 .home {
-    height: 70vh;
     background-color: var(--main-bg-color);
     padding: 0 30px 80px 264px;
     border: solid 1px #707070;
