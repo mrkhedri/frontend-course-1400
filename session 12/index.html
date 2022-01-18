@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>پروژه تمرینی از یک صفحه وب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+</head>
+<body>
+<div class="home">
+    <div class="sidebar">
+        𝓼𝓲𝓭𝓮𝓫𝓪𝓻.....
+    </div>
+    <div class="container">
+        <div class="header">
+            <span class="header-logo">غذای تازه</span>
+
+            <nav class="header-item">
+                <img src="../common/img/imageProfile.png" width="35" height="35" alt="profile-image"/>
+                <ul>
+                    <li>جوریدنی ها</li>
+                    <li>درباره ما</li>
+                    <li> مدل کاریمون</li>
+                    <li>نقشه راه</li>
+                    <li> مشتریان</li>
+                </ul>
+            </nav>
+            <button class="cart-btn">
+                سبد خرید
+                <i style="font-size:15px;color: white" class="fa">&#xf07a;</i>
+            </button>
+
+        </div>
+        <div class="main">
+            <div class="content">
+                <h1 class="content-title">“ People who loves to eat are always Best People “</h1>
+                <p class="content-title">Julia Child</p>
+                <div class="slider">
+                    <div><img class="img" src="../common/img/slideImageFood1.png" alt="غدا"/></div>
+                    <div><img class="img" src="../common/img/food2.jpg" alt="غدا"/></div>
+                    <div><img class="img" src="../common/img/food3.jpg" alt="غدا"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slider').slick({
+            rtl: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+        });
+    });
+</script>
+</body>
+</html>
