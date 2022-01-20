@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>رستوران یاسمین</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="home">
+    <div class="header">
+        <div class="container">
+            <div class="main-content">
+                <div class="header-wrapper">
+                    <div class="right">
+                        <span class="header-logo">رستوران یاسمین</span>
+                        <nav class="header-item">
+                            <img src="../common/img/imageProfile.png" width="35" height="35" alt="profile-image"/>
+                            <ul>
+                                <li><a href="#">جوریدنی ها</a></li>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#"> مدل کاریمون</a></li>
+                                <li><a href="#">نقشه راه</a></li>
+                                <li><a href="#"> مشتریان</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="cart-btn">
+                        سبد خرید
+                        <i style="font-size:15px;color: white" class="fa">&#xf07a;</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-wrapper">
+            <aside class="aside">
+                My sidebar
+            </aside>
+            <div class="main-content">
+                <div class="main">
+                    <div class="content">
+                        <q class="quote-wrapper">
+                            <span class="quote">“ با مغز خودت فکر کن، نه با ذهن پوسیده گذشتگان “</span>
+                            <span class="author">نادر ابراهیمی</span>
+                        </q>
+                        <div class="slider">
+                            <div><img class="img" src="../common/img/slideImageFood1.png" alt="غدا"/></div>
+                            <div><img class="img" src="../common/img/food2.jpg" alt="غدا"/></div>
+                            <div><img class="img" src="../common/img/food3.jpg" alt="غدا"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slider').slick({
+            rtl: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url("reset.css");
+@import url("fontiran.css");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: white;
+    --main-primary-color: #ef4c00;
+    --main-secendry-color: #ff0043;
+    --main-text-color: #2e4765;
+    --main-border-color: #2e476533;
+    --main-gray-color: #707070;
+}
+
+.button {
+    font-family: IRANSans, serif;
+}
+
+body {
+    font-family: IRANSans, serif;
+}
+
+.home {
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.main-wrapper {
+    display: flex;
+}
+
+.main-content {
+    padding: 0 16px;
+    flex: 0 0 75%;
+}
+
+/*...................................................sidebar*/
+.aside {
+    padding: 0 16px;
+    height: 325px;
+    flex: 0 0 25%;
+}
+
+/*.................................................Header*/
+.header {
+    height: 91px;
+    display: flex;
+    border-bottom: solid 1px var(--main-border-color)
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrapper .right {
+    display: flex;
+}
+
+.header-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--main-primary-color);
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    margin-top: -12px;
+
+}
+
+.header .cart-btn {
+    margin-top: 35px;
+    width: 99.7px;
+    height: 38.7px;
+    margin-bottom: 10.2px;
+    padding: 8.8px 8.2px 9.8px 11.6px;
+    border-radius: 28px;
+    font-size: 13px;
+    color: var(--main-bg-color);
+    border: 1px solid var(--main-primary-color);
+    background-color: var(--main-primary-color);
+}
+
+.header .header-item {
+    padding-right: 32px;
+    border-right: 1px solid var(--main-border-color);
+    height: 91.2px;
+    display: flex;
+    align-items: center;
+}
+
+.header .header-item ul {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.header .header-item li {
+    list-style-type: none;
+    color: var(--main-text-color);
+}
+
+.header .header-item li a {
+    padding: 36px 12px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 250ms, color 200ms, font-weight 100ms;
+}
+
+.header .header-item li a:hover {
+    border-bottom: 3px solid var(--main-primary-color);
+    font-weight: bold;
+    color: var(--main-primary-color);
+}
+
+.header .header-item img {
+    border-radius: 35px;
+}
+
+.header .header-item button {
+    min-width: 80px;
+    border: unset;
+    padding: 2px;
+    opacity: 0.2;
+    background-color: var(--main-bg-color);
+    border-bottom: 2px solid var(--main-gray-color);
+}
+
+.header .header-item button:focus {
+    opacity: 0.2;
+    border-bottom: 1px solid var(--main-primary-color);
+}
+
+/*.................................................main content*/
+.main {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-wrapper {
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    color: var(--main-text-color);
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.quote-wrapper .author {
+    color: var(--main-primary-color);
+    margin-top: 59px;
+}
+
+.slider {
+    width: 1053px;
+    height: 369px;
+    padding: 0 0 0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.slider .img {
+    width: 1053px;
+    height: 369px;
+    border-radius: 15px;
+    background-size: cover;
+}
