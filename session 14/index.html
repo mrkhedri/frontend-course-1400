@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>رستوران یاسمین</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<div class="home">
+    <div class="header">
+        <div class="container">
+            <div class="main-content">
+                <div class="header-wrapper">
+                    <div class="right">
+                        <span class="header-logo">رستوران یاسمین</span>
+                        <nav class="header-item">
+                            <img src="../common/img/imageProfile.png" width="35" height="35" alt="profile-image"/>
+                            <ul>
+                                <li><a href="#">جوریدنی ها</a></li>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#"> مدل کاریمون</a></li>
+                                <li><a href="#">نقشه راه</a></li>
+                                <li><a href="#"> مشتریان</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="cart-btn">
+                        سبد خرید
+                        <i style="font-size:15px;color: white" class="fa">&#xf07a;</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-header">
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <q class="quote-wrapper">
+                    <span class="quote">“ با مغز خودت فکر کن، نه با ذهن پوسیده گذشتگان “</span>
+                    <span class="author">نادر ابراهیمی</span>
+                </q>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-wrapper">
+            <aside class="aside">
+                <div class="on-the-way-order">
+                    <h5>غذای شما در حال <br /> ارسال است</h5>
+                    <img src="../common/img/bike.PNG" alt="bike">
+                    <time>
+                        <span class="num">۱۵</span>
+                        <span class="type">دقیقه</span>
+                        <span class="num double-dotes">:</span>
+                        <span class="num">۲۵</span>
+                        <span class="type">ثانیه</span>
+                    </time>
+                </div>
+
+                <div class="filter-foods">
+                    <h5>قیمت / خدمات</h5>
+                    <div class="filter-price">
+                        <span class="line"></span>
+                        <span class="dote first"></span>
+                        <span class="dote last"></span>
+                    </div>
+                    <h6>لیست انواع غذاها</h6>
+                    <ul class="countries">
+                        <li><a class="selected" href="#">آمریکایی</a></li>
+                        <li><a href="#">ایتالیایی</a></li>
+                        <li><a href="#">هندی</a></li>
+                        <li><a href="#">ژاپنی</a></li>
+                        <li><a href="#">لاتین</a></li>
+                        <li><a class="selected" href="#">ایرانی</a></li>
+                        <li><a href="#">مکزیکی</a></li>
+                        <li><a href="#">دریایی</a></li>
+                    </ul>
+                    <div class="img">
+                        <img src="../common/img/Food.png" alt="food">
+                        <a href="#">انتخاب</a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <div class="main">
+                    <div class="content">
+                        <div class="slider">
+                            <div><img class="img" src="../common/img/slideImageFood1.png" alt="غدا"/></div>
+                            <div><img class="img" src="../common/img/food2.jpg" alt="غدا"/></div>
+                            <div><img class="img" src="../common/img/food3.jpg" alt="غدا"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.slider').slick({
+            rtl: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+        });
+    });
+</script>
+</body>
+</html>
