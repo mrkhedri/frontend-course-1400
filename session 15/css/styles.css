@@ -1,0 +1,525 @@
+@import url("reset.css");
+@import url("fontiran.css");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: white;
+    --main-primary-color: #ef4c00;
+    --main-secendry-color: #ff0043;
+    --main-text-color: #2e4765;
+    --main-border-color: #2e476533;
+    --main-gray-color: #707070;
+    --main-secendry-text-color: #9f072f;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.button {
+    font-family: IRANSans, serif;
+}
+
+.primary-btn {
+    background-color: var(--main-primary-color);
+    border-radius: 28px;
+    color: var(--main-bg-color);
+    border: none;
+}
+
+body {
+    font-family: IRANSans, serif;
+    height: 2000px;
+}
+
+.home {
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.main-wrapper {
+    display: flex;
+}
+
+.main-content {
+    padding: 0 16px;
+    flex: 0 0 75%;
+}
+
+/*...................................................sidebar*/
+.aside {
+    padding: 0 16px;
+    height: 325px;
+    flex: 0 0 25%;
+}
+
+/*...................................................Header*/
+.header {
+    height: 91px;
+    display: flex;
+    border-bottom: solid 1px var(--main-border-color)
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrapper .right {
+    display: flex;
+}
+
+.header-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--main-primary-color);
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    margin-top: -12px;
+
+}
+
+.header .cart-btn {
+    margin-top: 35px;
+    width: 99.7px;
+    height: 38.7px;
+    margin-bottom: 10.2px;
+    padding: 8.8px 8.2px 9.8px 11.6px;
+    border-radius: 28px;
+    font-size: 13px;
+    color: var(--main-bg-color);
+    border: 1px solid var(--main-primary-color);
+    background-color: var(--main-primary-color);
+}
+
+.header .header-item {
+    padding-right: 32px;
+    border-right: 1px solid var(--main-border-color);
+    height: 91.2px;
+    display: flex;
+    align-items: center;
+}
+
+.header .header-item ul {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.header .header-item li {
+    list-style-type: none;
+    color: var(--main-text-color);
+}
+
+.header .header-item li a {
+    padding: 36px 12px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 250ms, color 200ms, font-weight 100ms;
+}
+
+.header .header-item li a:hover {
+    border-bottom: 3px solid var(--main-primary-color);
+    font-weight: bold;
+    color: var(--main-primary-color);
+}
+
+.header .header-item img {
+    border-radius: 35px;
+}
+
+.header .header-item button {
+    min-width: 80px;
+    border: unset;
+    padding: 2px;
+    opacity: 0.2;
+    background-color: var(--main-bg-color);
+    border-bottom: 2px solid var(--main-gray-color);
+}
+
+.header .header-item button:focus {
+    opacity: 0.2;
+    border-bottom: 1px solid var(--main-primary-color);
+}
+
+/*.................................................main content*/
+.main {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-wrapper {
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    color: var(--main-text-color);
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 75%;
+}
+
+.quote-wrapper .author {
+    color: var(--main-primary-color);
+    margin-top: 59px;
+}
+
+.slider {
+    width: 1053px;
+    height: 369px;
+    padding: 0 0 0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.slider .img {
+    width: 1053px;
+    height: 369px;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+/*...................................................Sidebar*/
+.on-the-way-order {
+    padding: 19px 24px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+    box-shadow: 0 3px 20px 0 rgba(46, 71, 101, 0.09);
+    background-color: #fff;
+    margin-top: 44px;
+}
+
+.on-the-way-order h5 {
+    line-height: 1.35;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.on-the-way-order img {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.on-the-way-order time {
+    color: var(--main-primary-color);
+    display: flex;
+    justify-content: center;
+    line-height: 67px;
+}
+
+.on-the-way-order time .num {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.on-the-way-order time .type {
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    margin-right: 6px;
+}
+
+.on-the-way-order time .double-dotes {
+    margin: 0 8px 0 12px;
+}
+
+.filter-foods {
+    padding: 16px 24px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.filter-foods h5 {
+    color: var(--main-text-color);
+    line-height: 1.33;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.filter-foods .filter-price {
+    margin-bottom: 16px;
+    padding: 24px 0;
+    position: relative;
+}
+
+.filter-foods .filter-price .line {
+    background-color: var(--main-primary-color);
+    width: 100%;
+    height: 2px;
+    display: flex;
+    border-radius: 6px;
+}
+
+.filter-foods .filter-price .dote {
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-primary-color);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: 7px solid #f2cdeb;
+    box-sizing: content-box;
+}
+
+.filter-foods .filter-price .first {
+    left: 15%;
+}
+
+.filter-foods .filter-price .last {
+    right: 20%;
+}
+
+.filter-foods h6 {
+    color: var(--main-text-color);
+    line-height: 1.33;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.filter-foods .countries {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-foods .countries li {
+    flex: 0 0 50%;
+    display: flex;
+}
+
+.filter-foods .countries li a {
+    margin-bottom: 8px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    line-height: 28px;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.filter-foods .countries li a.selected {
+    background-color: var(--main-primary-color);
+    color: white;
+}
+
+.filter-foods .img {
+    position: relative;
+}
+
+.filter-foods .img img {
+    width: 150%;
+    margin-right: -25%;
+    margin-top: 16px;
+    margin-bottom: -40px;
+}
+
+.filter-foods .img a {
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+    text-decoration: none;
+    padding: 5.6px 37.6px 8.3px 34.3px;
+    background-color: #9f072f;
+    border-radius: 100px;
+    color: white;
+    line-height: 26px;
+}
+
+/*...................................................search*/
+.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-box {
+    display: flex;
+}
+
+.search-input {
+    width: 370px;
+    height: 50px;
+    margin: 28px 12px 31px 287px;
+    padding: 14px 19px 14px 28px;
+    border-radius: 26px;
+    background-color: #f4f9ff;
+}
+
+.search-input input {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: #f4f9ff;
+    color: var(--main-text-color);
+    width: 90%;
+    font-family: IRANSans, serif;
+}
+
+.search-input i {
+    font-weight: bolder;
+    color: var(--main-secendry-text-color)
+}
+
+.right-box button {
+    width: 49.4px;
+    height: 49.4px;
+    border-radius: 100%;
+    border: none;
+    margin-top: 28.4px;
+    padding: 14.5px 12.5px 14.5px 12.8px;
+    background-color: var(--main-primary-color);
+}
+
+.right-box button i {
+    font-size: 20px;
+    color: var(--main-bg-color);
+}
+
+.menu-bar {
+    display: flex
+}
+
+.menu-bar button {
+    width: 150px;
+    height: 34.8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 6px 20px 9px 14px;
+    border-radius: 28px;
+    font-weight: bold;
+    color: var(--main-text-color);
+    border: none;
+    font-family: IRANSans, serif;
+}
+
+.menu-bar button i {
+    margin-right: 5px;
+    font-size: 15px;
+    color: var(--main-text-color);
+}
+
+.card {
+    width: 327px;
+    margin: 153px 0 0;
+    border: solid 1px rgba(46, 71, 101, 0.2);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.card img {
+    width: 327px;
+    height: 154px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.content {
+    padding: 2%;
+}
+
+.card .content .title {
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: #b30733;
+}
+
+.card .content button {
+    background-color: unset;
+    border: none;
+    width: 17px;
+    height: 17px;
+}
+
+.card .title-box {
+    padding-left: 2px;
+    padding-right: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.like {
+    color: var(--main-secendry-color);
+}
+
+.rate-star {
+    padding-top: 5%;
+}
+
+.rate-star i {
+    color: var(--main-primary-color);
+}
+
+.rate-star .disable {
+    color: #ef4c005c;
+}
+
+.rate-star span {
+    font-size: 13px;
+    color: var(--main-text-color);
+}
+
+.card .footer button {
+    font-size: 13px;
+    width: 63.7px;
+    height: 24.2px;
+    margin: 15.8px 23.7px 0 1px;
+    padding: 3.2px 15.3px 6px 11.4px;
+    opacity: 0.87;
+    border-radius: 16px;
+    background-color: rgba(46, 71, 101, 0.05);
+}
+
+.card .footer span {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--main-text-color);
+}
+
