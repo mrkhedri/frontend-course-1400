@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session 18</title>
+</head>
+<body>
+
+
+<button type="button" onclick="document.getElementById('get-date').innerHTML = Date()">
+    Click me to display Date and Time.
+</button>
+<p id="get-date"></p>
+
+<br>
+
+<button type="button" onclick="showMeDateAndTimeWithAlert()">
+    Click me to display Date and Time in the alert.
+</button>
+
+<br>
+
+<button type="button" onclick="showMeDateAndTimeWithDocument()">
+    Click me to display Date and Time in the document.
+</button>
+
+<br><br>
+
+<button onclick="document.getElementById('toggle-light').src='https://www.w3schools.com/js/pic_bulbon.gif'">
+    Turn on the light
+</button>
+<img id="toggle-light" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px" alt="pic_bulboff">
+<button onclick="document.getElementById('toggle-light').src='https://www.w3schools.com/js/pic_bulboff.gif'">
+    Turn off the light
+</button>
+
+<br><br>
+
+<p id="font-size">
+    JavaScript can change the style of an HTML element.
+</p>
+<button type="button" onclick="changeFontSize()">
+    Click Me!
+</button>
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+<script src="scripts.js"></script>
+</body>
+</html>
