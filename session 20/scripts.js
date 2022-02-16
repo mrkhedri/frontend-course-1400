@@ -38,8 +38,8 @@ let x = 10;
 let y = 10;
 let z = 10;
 x += 2
-y += 2
-z += 2
+y -= 2
+z *= 2
 document.getElementById("Assignments-sample").innerHTML = " x+=2 »»" + ' ' + x;
 document.getElementById("Subtraction-sample").innerHTML = " y-=2 »»" + ' ' + y;
 document.getElementById("Multiplication-sample").innerHTML = "z*=2 »»" + ' ' + z;
