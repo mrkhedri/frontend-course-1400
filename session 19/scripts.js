@@ -1,20 +1,12 @@
 /*
 * plus two number
 */
-var name = "yasamin"
-
-function handleTestOnclickButton(){
-document.getElementById('show-name').innerHTML = name;
-
-
-}
 function plusNumbers() {
   let x = 5; // initial x
   let y = 6; // initial y
   let z = x + y; // sum of x and y
 
   document.getElementById("plus-numbers").innerHTML = "The value of z is " + z + ".";
-
 }
 
 function isEqual(value1, value2) {
@@ -29,4 +21,3 @@ function isEqual(value1, value2) {
     document.getElementById("is-equal").innerHTML = "False";
   }
 }
-
