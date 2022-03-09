@@ -1,0 +1,60 @@
+@import url(fontiran.css);
+@import url(reset.css);
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 500px;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.dropdownBtn {
+    width: 200px;
+    height: 80px;
+    background-color: #93bb58;
+    border-radius: 5px;
+    color: #171717;
+    margin-top: 20px;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 5px;
+    padding: 9%;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-end;*/
+    text-align: left;
+    background-color: #dddddd;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #171717;
+    margin-left: 10px;
+    display: block;
+    font-size: 15px;
+
+}
+.dropdown-content a:hover{
+    background-color: #93bb58;
+}
+
+.show {
+    display: block;
+}
