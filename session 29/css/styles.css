@@ -1,60 +1,84 @@
 @import url(fontiran.css);
 @import url(reset.css);
 
-body {
-    display: flex;
-    justify-content: center;
+/* global */
+* {
+    box-sizing: border-box;
 }
 
-.main {
-    width: 500px;
-    display: flex;
-    margin-top: 10%;
-    flex-direction: column;
-    align-items: center;
+body {
+    font-family: IRANSans, serif;
+    color: #333;
+}
 
+button, a {
+  font-family: IRANSans, serif;
+}
+
+.container {
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content {
+  margin: 48px 0;
 }
 
 h1 {
-    font-size: 25px;
-    font-weight: bolder;
+  margin-bottom: 32px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.dropdownBtn {
-    width: 200px;
-    height: 80px;
-    background-color: #93bb58;
-    border-radius: 5px;
-    color: #171717;
-    margin-top: 20px;
-    outline: none;
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
 }
 
-.dropdown-content {
-    display: none;
-    margin-top: 5px;
-    padding: 9%;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: flex-end;*/
-    text-align: left;
-    background-color: #dddddd;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.box {
+  width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px 1px rgba(119, 119, 119, 0.36);
+  border-radius: 6px;
 }
 
-.dropdown-content a {
-    text-decoration: none;
-    color: #171717;
-    margin-left: 10px;
-    display: block;
-    font-size: 15px;
-
-}
-.dropdown-content a:hover{
-    background-color: #93bb58;
+.box .head {
+  cursor: pointer;
+  user-select: none;
 }
 
-.show {
-    display: block;
+.box .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.box .item {
+  flex: 1;
+  text-align: center;
+  padding: 12px 16px;
+  border-bottom: 2px solid #ddd;
+  transition: color 250ms, border-bottom 250ms;
+}
+
+.box .item.active {
+  border-bottom: 2px solid #ff4444;
+  color: #ff4444;
+}
+
+.box .list-content {
+  padding: 16px;
+  line-height: 1.7;
+}
+
+.box .list-content .item-content {
+  display: none;
+}
+
+.box .list-content .active {
+  display: block;
+}
+

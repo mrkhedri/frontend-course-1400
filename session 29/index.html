@@ -10,21 +10,60 @@
 </head>
 <body>
 
-<div class="main">
-    <h1>Click on DropDown</h1>
-    <h1>by click button show menu</h1>
-    <div class="myDropdown">
-        <button onclick="myFunction()" class="dropdownBtn">Dropdown</button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Contact2</a>
-            <a href="#">Contact3</a>
+<main id="main">
+    <div class="container">
+        <div class="content">
+            <h1>Session 29</h1>
+
+            <div class="box">
+                <div class="head">
+                    <!-- ul.list>li.item{Test}*3 -->
+                    <ul class="list" id="header-list">
+                        <li class="item active" data-type="most-viewed" onclick="selectItem(this)">بیشترین بازدید</li>
+                        <li class="item" data-type="popular" onclick="selectItem(this)">محبوب ترین</li>
+                        <li class="item" data-type="most-like" onclick="selectItem(this)">بیشترین لایک</li>
+                    </ul>
+                </div>
+
+                <div class="list-content" id="content-list">
+                    <div data-type="most-viewed" class="item-content active">
+                        محتوای بیشترین بازدید
+                        <br>
+                        محتوای بیشترین بازدید
+                        <br>
+                        محتوای بیشترین بازدید
+                        <br>
+                        محتوای بیشترین بازدید
+                        <br>
+                        محتوای بیشترین بازدید
+                    </div>
+                    <div data-type="popular" class="item-content">
+                        محتوای محبوب ترین ها
+                        <br>
+                        محتوای محبوب ترین ها
+                        <br>
+                        محتوای محبوب ترین ها
+                        <br>
+                        محتوای محبوب ترین ها
+                        <br>
+                        محتوای محبوب ترین ها
+                    </div>
+                    <div data-type="most-like" class="item-content">
+                        محتوای بیشترین لایک
+                        <br>
+                        محتوای بیشترین لایک
+                        <br>
+                        محتوای بیشترین لایک
+                        <br>
+                        محتوای بیشترین لایک
+                        <br>
+                        محتوای بیشترین لایک
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-</div>
+</main>
 
 
 <script src="scripts.js"></script>
