@@ -1,0 +1,140 @@
+@import url(fontiran.css);
+@import url(reset.css);
+
+/* global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: IRANSans, serif;
+  color: #333;
+}
+
+button, a {
+  font-family: IRANSans, serif;
+}
+
+.container {
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content {
+  padding: 48px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+#main {
+  position: relative;
+}
+
+.open {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  user-select: none;
+  cursor: pointer;
+}
+
+.open span {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  display: flex;
+}
+
+#aside {
+  position: absolute;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  background-color: rgb(31, 40, 62);
+  color: #fff;
+  font-weight: 100;
+  padding: 60px 16px 32px 16px;
+  text-align: justify;
+  height: 100%;
+  /*opacity: 0;*/
+  visibility: hidden;
+  transition: all 1000ms;
+}
+
+#aside.show {
+  /*opacity: 1;*/
+  visibility: visible;
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  user-select: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #1f283e;
+  padding: 5px 8px 4px 8px;
+  border-radius: 4px;
+}
+
+.color.black {
+  background-color: #000 !important;
+}
+
+.color.white {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.color.red {
+  background-color: #ff4444 !important;
+}
+
+.color.green {
+  background-color: #27ae60 !important;
+}
+
+.color.purple {
+  background-color: #8e44ad !important;
+}
+
+/* dark mode styles */
+body.dark-mode {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+/* change aside background color */
+.sidebar-color {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebar-color .color {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
