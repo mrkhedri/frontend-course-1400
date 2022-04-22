@@ -7,11 +7,12 @@ the lazy dog`;
 
 let firstName = "John";
 let lastName = "Doe";
-let z = "welcome" + firstName + lastName //welcome john Doe
+let z = "welcome"+ " " + firstName + " "+ lastName //welcome john Doe
 let f = `welcome + firstName + lastName` //welcome + firstName + lastName
 let e = `welcome ${firstName} ${lastName}` //welcome + firstName + lastName
 console.log("f -->",f)
 console.log("e -->",e)
+console.log("z -->",z)
 // ...........................................................
 let html  = `<ul>`;
 let tags = ["template literals", "javascript", "es6"];
