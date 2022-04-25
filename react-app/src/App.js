@@ -1,5 +1,7 @@
 import React from "react";
 import HelloWorld from "./components/HelloWorld";
+import Users from "./components/Users";
+import Tick from "./components/Tick";
 import './App.css';
 
 function App() {
@@ -10,14 +12,13 @@ function App() {
 
         <HelloWorld />
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <br />
+
+        <Users />
+
+        <br />
+
+        <Tick />
       </header>
     </div>
   );

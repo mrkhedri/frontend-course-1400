@@ -1,10 +1,12 @@
 import React from "react";
 
 function HelloWorld() {
+  const name = 'world';
+
   return (
-    <p>
-      Hello world 123
-    </p>
+    <div>
+      Hello {name}
+    </div>
   )
 }
 
