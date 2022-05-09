@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Custom Styles */
+.Comment {
+  border: 1px solid #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
