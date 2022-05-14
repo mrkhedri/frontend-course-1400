@@ -5,6 +5,8 @@ import Tick from "./components/Tick";
 import Welcome from "./components/Welcome";
 import Comment from "./components/Comment";
 import Clock from "./components/Clock";
+import Form from "./components/Form";
+import Toggle from "./components/Toggle";
 import './App.css';
 
 const comment = {
@@ -16,46 +18,92 @@ const comment = {
     }
 };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Frontend Development 1400
+const welcome_users = ['Yasamin', 'Ali', 'Mohadeseh', 'Hamid']
 
-        <HelloWorld />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-        <br />
+    this.state = {
+      users: welcome_users,
+      deletedUsers: []
+    }
+  }
 
-        <Clock date={new Date()} />
+  handleRemoveAli() {
+    this.setState({
+      users: this.state.users.filter(item => item !== 'Ali'),
+      deletedUsers: [
+        ...this.state.deletedUsers,
+        this.state.users.filter(item => item === 'Ali')
+      ],
+    })
+  }
 
-        <br />
+  render() {
+    const { users, deletedUsers } = this.state;
 
-        {/*<Comment*/}
-        {/*    date={comment.date}*/}
-        {/*    text={comment.text}*/}
-        {/*    author={comment.author}*/}
-        {/*/>*/}
+    return (
+      <div className="App">
+        <header className="App-header">
+          Frontend Development 1400
 
-        {/*<br />*/}
+          <HelloWorld />
 
-        {/*<Users />*/}
+          <br />
 
-        {/*<br />*/}
+          <Clock date={new Date()} />
 
-        {/*<Tick />*/}
+          <br />
 
-        {/*<br />*/}
+          {/*<Comment*/}
+          {/*    date={comment.date}*/}
+          {/*    text={comment.text}*/}
+          {/*    author={comment.author}*/}
+          {/*/>*/}
 
-        <Welcome name="Yasamin" />
+          {/*<br />*/}
 
-        {/*<Welcome name="Ali" />*/}
+          {/*<Users />*/}
 
-        {/*<Welcome name="Mohadeseh" />*/}
+          {/*<br />*/}
 
-        {/*<Welcome name="Hamid" />*/}
-      </header>
-    </div>
-  );
+          {/*<Tick />*/}
+
+          {/*<br />*/}
+
+          <div style={{ textAlign: "left" }}>
+            <h3>Users:</h3>
+            {users.map(item => (
+              <Welcome key={item} name={item} />
+            ))}
+
+            <br/>
+
+            <h3>Deleted Users:</h3>
+            {deletedUsers.length
+              ? deletedUsers.map(item => (
+                <Welcome key={item} name={item} />
+              ))
+              : <span>There is not any deleted users</span>
+            }
+          </div>
+
+          <br/>
+
+          <button onClick={() => this.handleRemoveAli()}>
+            Remove Ali From List
+          </button>
+
+          <Form />
+
+          <br />
+
+          <Toggle />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
