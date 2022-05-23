@@ -7,6 +7,7 @@ import Comment from "./components/Comment";
 import Clock from "./components/Clock";
 import Form from "./components/Form";
 import Toggle from "./components/Toggle";
+import Numbers from "./components/Numbers";
 import './App.css';
 
 const comment = {
@@ -48,13 +49,16 @@ class App extends React.Component {
         <header className="App-header">
           Frontend Development 1400
 
-          <HelloWorld />
-
+          <br />
           <br />
 
-          <Clock date={new Date()} />
+          {/*<HelloWorld />*/}
 
-          <br />
+          {/*<br />*/}
+
+          {/*<Clock date={new Date()} />*/}
+
+          {/*<br />*/}
 
           {/*<Comment*/}
           {/*    date={comment.date}*/}
@@ -72,34 +76,43 @@ class App extends React.Component {
 
           {/*<br />*/}
 
-          <div style={{ textAlign: "left" }}>
-            <h3>Users:</h3>
-            {users.map(item => (
-              <Welcome key={item} name={item} />
-            ))}
+          {/*<div style={{ textAlign: "left" }}>*/}
+          {/*  <h3>Users:</h3>*/}
+          {/*  {users.map(item => (*/}
+          {/*    <Welcome key={item} name={item} />*/}
+          {/*  ))}*/}
 
-            <br/>
+          {/*  <br/>*/}
 
-            <h3>Deleted Users:</h3>
-            {deletedUsers.length
-              ? deletedUsers.map(item => (
-                <Welcome key={item} name={item} />
-              ))
-              : <span>There is not any deleted users</span>
-            }
-          </div>
+          {/*  <h3>Deleted Users:</h3>*/}
+          {/*  {deletedUsers.length*/}
+          {/*    ? deletedUsers.map(item => (*/}
+          {/*      <Welcome key={item} name={item} />*/}
+          {/*    ))*/}
+          {/*    : <span>There is not any deleted users</span>*/}
+          {/*  }*/}
+          {/*</div>*/}
 
-          <br/>
+          {/*<br/>*/}
 
-          <button onClick={() => this.handleRemoveAli()}>
-            Remove Ali From List
-          </button>
+          {/*<button onClick={() => this.handleRemoveAli()}>*/}
+          {/*  Remove Ali From List*/}
+          {/*</button>*/}
+
+          {/*<br />*/}
+
+          {/*<Toggle />*/}
+
+          {/*<br />*/}
+
+          {/*<Numbers />*/}
+
+          {/*<br />*/}
 
           <Form />
 
           <br />
 
-          <Toggle />
         </header>
       </div>
     );

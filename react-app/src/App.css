@@ -47,3 +47,10 @@
 h3 {
   margin: 0;
 }
+.numbers-list {
+  display: flex;
+  list-style: none;
+}
+.numbers-list li {
+  padding: 0 16px;
+}
