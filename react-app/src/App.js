@@ -8,6 +8,7 @@ import Clock from "./components/Clock";
 import Form from "./components/Form";
 import Toggle from "./components/Toggle";
 import Numbers from "./components/Numbers";
+import FunctionalComponentLifecycle from "./components/FunctionalComponentLifecycle";
 import './App.css';
 
 const comment = {
@@ -109,9 +110,11 @@ class App extends React.Component {
 
           {/*<br />*/}
 
-          <Form />
+          {/*<Form />*/}
 
-          <br />
+          {/*<br />*/}
+
+          <FunctionalComponentLifecycle />
 
         </header>
       </div>
