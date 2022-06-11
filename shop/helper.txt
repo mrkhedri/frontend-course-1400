@@ -1,0 +1,11 @@
+get app:
+    git clone https://github.com/mrkhedri/frontend-course-1400.git | git pull
+
+get to shop:
+    cd shop
+
+install dependencies:
+    yarn | npm install
+
+Start app:
+    yarn start | npm start
