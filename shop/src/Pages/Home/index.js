@@ -9,7 +9,7 @@ function Home() {
     <Layout>
       <Slider />
 
-      <div>Home</div>
+      <div style={{ height: 800 }}>Home</div>
       <Link to="about">Go to About</Link>
     </Layout>
   )

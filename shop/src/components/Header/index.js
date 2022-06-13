@@ -1,86 +1,85 @@
 import React from "react";
 import Container from '@mui/material/Container';
-import './style.scss'
-import Gallery from "../../assets/images/galley.jpg";
-import Search from "../../assets/images/search.svg";
 
+import HeaderShape from 'components/Svg/HeaderShape'
+import Gallery from "assets/images/galley.jpg";
+import Search from "assets/images/search.svg";
+
+import './style.scss'
 
 function Header() {
-    return (
+  return (
 
-        <div className='Header'>
+    <div className='Header'>
+      <div className='headerbox'>
+        <HeaderShape className="header-shape" />
 
-            <div className='headerbox'>
-                <Container maxWidth="lg" className="whitebox">
-                    <div>
-                        <a href="/">
-                            <img className="img" src={Gallery} alt=""/>
-                        </a>
+        <Container maxWidth="lg" className="whitebox">
+          <div>
+            <a href="#">
+              <img className="img" src={Gallery} alt=""/>
+            </a>
+          </div>
+          <div className="list">
+            <ul className="menu">
+              <li>
+                <a href="#"> شال و روسری </a>
+                <div className="submenu-container">
+                  <div className="submenu-inner">
+                    <div className="hsubmenu">
+                      <ul>
+                        <ol> انگشتر</ol>
+                        <ol> دستبند</ol>
+                        <ol> پابند</ol>
+                        <ol> گردنبند</ol>
+                        <ol> نیم ست</ol>
+
+                      </ul>
                     </div>
-                    <div className="list">
-                        <ul className="menu">
-                            <li><a  href=""> شال و روسری </a></li>
-                            <li><a href=""> شال و روسری </a></li>
-                            <li><a href=""> شال و روسری </a></li>
-                        </ul>
+                    <div className="hsubmenu">
+                      <ul>
+                        <ol> گوشواره</ol>
+                        <ol> ایرکاف</ol>
 
+                      </ul>
                     </div>
+                    <div className="hsubmenu">
+                      <ul>
+                        <ol> پیرسینگ</ol>
+                        <ol> دستبند</ol>
+                        <ol> پابند</ol>
+                        <ol> گردنبند</ol>
 
-                    <div className="xx">
 
-                            <img className="icon1" src={Search} alt=""/>
-                        <img className="icon1" src={Search} alt=""/>
-
-                        <div >
-                            <span className="sign">عضویت </span>
-                            <span> | </span>
-                            <span className="sign">وارد شوید</span>
-                        </div>
-
+                      </ul>
                     </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#"> دوم </a>
+              </li>
+              <li>
+                <a href="#"> سوم </a>
+              </li>
+            </ul>
+          </div>
+          <div className="xx">
 
+            <img className="icon1" src={Search} alt=""/>
+            <img className="icon1" src={Search} alt=""/>
 
-                </Container>
-
-
+            <div>
+              <span className="sign">عضویت </span>
+              <span> | </span>
+              <span className="sign">وارد شوید</span>
             </div>
 
-<div className="hide">
-                <Container maxWidth="lg" className="submenu1" >
-                <div className="hsubmenu">
-                    <ul>
-                        <ol> انگشتر </ol>
-                        <ol> دستبند </ol>
-                        <ol> پابند </ol>
-                        <ol> گردنبند </ol>
-                        <ol> نیم ست </ol>
-
-                    </ul>
-                </div>
-
-                <div className="hsubmenu">
-                    <ul>
-                        <ol> گوشواره </ol>
-                        <ol> ایرکاف </ol>
-
-                    </ul>
-                </div>
-                <div className="hsubmenu">
-                    <ul>
-                        <ol> پیرسینگ </ol>
-                        <ol> دستبند </ol>
-                        <ol> پابند </ol>
-                        <ol> گردنبند </ol>
-
-
-                    </ul>
-                </div>
-
-               </Container>
-</div>
-
-        </div>
-    )
+          </div>
+        </Container>
+      </div>
+    </div>
+  )
 }
 
 export default Header;

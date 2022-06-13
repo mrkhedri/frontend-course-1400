@@ -1,6 +1,7 @@
 .hide{
   display: none;
 }
+
 .Header {
   height: 160px;
 
@@ -10,18 +11,25 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    position: relative;
+  }
+
+  .header-shape {
+    position: absolute;
+    top: 0;
+    z-index: 9;
   }
 
   .whitebox {
-    background-color: #ff0010;
-    //background: #fff
+    background: #fff;
     height: 100px;
     border-radius: 5px;
     //box-shadow: 0 10px 30pxrgba(50,50,93,0.12),0 -1px 4pxrgba(0,0,0,0.06)
     display: flex;
     align-items: center;
     //justify-content: space-between;
-
+    position: relative;
+    z-index: 10;
   }
 
   .img {
@@ -33,20 +41,76 @@
   }
 
   .menu {
+    margin: 0;
+
     li {
       display: inline;
       margin-left: 80px;
 
-      //a:hover + .hide {
-      //  background-color: #3B3F47FF;
-      //  border-radius: 15px;
-      //  color: #ffffff;
-      //  display: block;
-      //
-      //}
+      .submenu-container {
+        background-color: #fff;
+        border-radius: 15px;
+        color: #3b3f47;
+        box-shadow: 0 10px 30px rgb(50 50 93 / 12%), 0 -1px 4px rgb(0 0 0 / 6%);
+        width: 100%;
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        //top: calc(100% + 10px);
+        transform: translateY(40px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s;
+        transition-delay: 0.2s;
+        display: flex;
+
+        .submenu-inner {
+          display: flex;
+        }
+      }
 
       a {
         text-decoration: none;
+        padding: 38px 0;
+        position: relative;
+
+        &:before {
+          content: " ";
+          position: absolute;
+          top: 37px;
+          right: -8px;
+          width: calc(100% + 16px);
+          height: 30px;
+          background-color: #ddd;
+          border-radius: 50px;
+          z-index: -1;
+          transition: background-color 200ms;
+        }
+
+        &:after {
+          content: "جدید";
+          position: absolute;
+          top: 30px;
+          left: -41px;
+          width: 46px;
+          height: 17px;
+          background-color: red;
+          color: #fff;
+          border-radius: 50px;
+          z-index: -1;
+          text-align: center;
+          font-size: 12px;
+        }
+
+        &:hover:before {
+          background-color: #bbb;
+        }
+
+        &:hover + .submenu-container {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(45px);
+        }
       }
     }
   }
@@ -96,12 +160,6 @@
     //float: left;
 
   }
-}
-.Header .menu li a:hover + .hide{
-  background-color: #3B3F47FF;
-  border-radius: 15px;
-  color: #ffffff;
-  display: block;
 }
 
 
