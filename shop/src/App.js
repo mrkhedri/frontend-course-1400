@@ -9,6 +9,7 @@ import About from './Pages/About'
 
 import theme from './theme';
 import './App.scss';
+import 'styles/font-awesome.css'
 
 function App() {
   return (

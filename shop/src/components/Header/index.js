@@ -1,5 +1,7 @@
 import React from "react";
 import Container from '@mui/material/Container';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import HeaderShape from 'components/Svg/HeaderShape'
 import Gallery from "assets/images/galley.jpg";
@@ -10,17 +12,19 @@ import './style.scss'
 function Header() {
   return (
 
-    <div className='Header'>
+    <div className="">
       <div className='headerbox'>
         <HeaderShape className="header-shape" />
 
-        <Container maxWidth="lg" className="whitebox">
-          <div>
+        <Container maxWidth="lg" className="header">
+          <div className="logo">
             <a href="#">
               <img className="img" src={Gallery} alt=""/>
             </a>
           </div>
-          <div className="list">
+
+
+          <div className="main-menu">
             <ul className="menu">
               <li>
                 <a href="#"> شال و روسری </a>
@@ -64,10 +68,12 @@ function Header() {
               </li>
             </ul>
           </div>
-          <div className="xx">
 
-            <img className="icon1" src={Search} alt=""/>
-            <img className="icon1" src={Search} alt=""/>
+
+          <div className="icons">
+
+            {/*<img className="icon1" src={Search} alt=""/>*/}
+            <i className="fa fa-shopping-cart" aria-hidden="true" />
 
             <div>
               <span className="sign">عضویت </span>
