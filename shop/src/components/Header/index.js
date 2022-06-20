@@ -9,7 +9,21 @@ import Search from "assets/images/search.svg";
 
 import './style.scss'
 
+
+
 function Header() {
+
+  const onClickShowSearch = () => {
+    document.getElementById("search").style.display = 'flex'
+    document.getElementById("sub-actions").style.display = 'none'
+
+  }
+
+  const onClickHideSearch = () => {
+    document.getElementById("sub-actions").style.display = 'flex'
+    document.getElementById("search").style.display = 'none'
+  }
+
   return (
 
     <div className="">
@@ -27,7 +41,7 @@ function Header() {
           <div className="main-menu">
             <ul className="menu">
               <li>
-                <a href="#"> شال و روسری </a>
+                <a href="#"> اکسسوری </a>
                 <div className="submenu-container">
                   <div className="submenu-inner">
                     <div className="hsubmenu">
@@ -61,28 +75,53 @@ function Header() {
                 </div>
               </li>
               <li>
-                <a href="#"> دوم </a>
+                <a href="#"> شال و روسری </a>
+                <div className="submenu-container">
+                  <div className="submenu-inner">
+                    <div className="hsubmenu">
+                      <ul>
+                        <ol> شال</ol>
+                        <ol>روسری</ol>
+                      </ul>
+                    </div>
+
+
+                  </div>
+                </div>
               </li>
               <li>
-                <a href="#"> سوم </a>
+                <a href="#"> گل سینه </a>
               </li>
             </ul>
           </div>
 
+          <div className="actions">
+            <div className="sub-action" id="sub-actions">
 
-          <div className="icons">
 
-            {/*<img className="icon1" src={Search} alt=""/>*/}
-            <i className="fa fa-shopping-cart" aria-hidden="true" />
+              {/*<img className="icon1" src={Search} alt=""/>*/}
+              <div className="icons">
+                <i className="fa fa-search icon" aria-hidden="true" onClick={onClickShowSearch}/>
 
-            <div>
-              <span className="sign">عضویت </span>
-              <span> | </span>
-              <span className="sign">وارد شوید</span>
+                <i className="fa fa-shopping-cart  icon" aria-hidden="true" />
+              </div>
+
+              <div>
+                <span className="sign">عضویت  </span>
+                <span>  |  </span>
+                <span className="sign">وارد شوید </span>
+              </div>
+
             </div>
-
+            <div className="search" id="search">
+              <i className="fa fa-close icon" aria-hidden="true" onClick={onClickHideSearch}></i>
+              <input className="input-search" type="text"/>
+              <div className="input-btn">جستجو</div>
+            </div>
           </div>
+
         </Container>
+
       </div>
     </div>
   )
