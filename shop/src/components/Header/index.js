@@ -15,84 +15,84 @@ function Header() {
 
   const onClickShowSearch = () => {
     document.getElementById("search").style.display = 'flex'
-    document.getElementById("sub-actions").style.display = 'none'
-
+    // document.getElementById("sub-actions").style.display = 'none'
   }
 
   const onClickHideSearch = () => {
-    document.getElementById("sub-actions").style.display = 'flex'
+    // document.getElementById("sub-actions").style.display = 'flex'
     document.getElementById("search").style.display = 'none'
   }
 
   return (
 
-    <div className="">
+    <div className="main-header">
       <div className='headerbox'>
         <HeaderShape className="header-shape" />
 
         <Container maxWidth="lg" className="header">
-          <div className="logo">
-            <a href="#">
-              <img className="img" src={Gallery} alt=""/>
-            </a>
-          </div>
+          <div className="right">
+            <div className="logo">
+              <a href="#">
+                <img className="img" src={Gallery} alt=""/>
+              </a>
+            </div>
+
+            <div className="main-menu">
+              <ul className="menu">
+                <li>
+                  <a href="#"> اکسسوری </a>
+                  <div className="submenu-container">
+                    <div className="submenu-inner">
+                      <div className="hsubmenu">
+                        <ul>
+                          <ol> انگشتر</ol>
+                          <ol> دستبند</ol>
+                          <ol> پابند</ol>
+                          <ol> گردنبند</ol>
+                          <ol> نیم ست</ol>
+
+                        </ul>
+                      </div>
+                      <div className="hsubmenu">
+                        <ul>
+                          <ol> گوشواره</ol>
+                          <ol> ایرکاف</ol>
+
+                        </ul>
+                      </div>
+                      <div className="hsubmenu">
+                        <ul>
+                          <ol> پیرسینگ</ol>
+                          <ol> دستبند</ol>
+                          <ol> پابند</ol>
+                          <ol> گردنبند</ol>
 
 
-          <div className="main-menu">
-            <ul className="menu">
-              <li>
-                <a href="#"> اکسسوری </a>
-                <div className="submenu-container">
-                  <div className="submenu-inner">
-                    <div className="hsubmenu">
-                      <ul>
-                        <ol> انگشتر</ol>
-                        <ol> دستبند</ol>
-                        <ol> پابند</ol>
-                        <ol> گردنبند</ol>
-                        <ol> نیم ست</ol>
-
-                      </ul>
-                    </div>
-                    <div className="hsubmenu">
-                      <ul>
-                        <ol> گوشواره</ol>
-                        <ol> ایرکاف</ol>
-
-                      </ul>
-                    </div>
-                    <div className="hsubmenu">
-                      <ul>
-                        <ol> پیرسینگ</ol>
-                        <ol> دستبند</ol>
-                        <ol> پابند</ol>
-                        <ol> گردنبند</ol>
-
-
-                      </ul>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li>
-                <a href="#"> شال و روسری </a>
-                <div className="submenu-container">
-                  <div className="submenu-inner">
-                    <div className="hsubmenu">
-                      <ul>
-                        <ol> شال</ol>
-                        <ol>روسری</ol>
-                      </ul>
+                </li>
+                <li>
+                  <a href="#"> شال و روسری </a>
+                  <div className="submenu-container">
+                    <div className="submenu-inner">
+                      <div className="hsubmenu">
+                        <ul>
+                          <ol> شال</ol>
+                          <ol>روسری</ol>
+                        </ul>
+                      </div>
+
+
                     </div>
-
-
                   </div>
-                </div>
-              </li>
-              <li>
-                <a href="#"> گل سینه </a>
-              </li>
-            </ul>
+                </li>
+                <li>
+                  <a href="#"> گل سینه </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="actions">
