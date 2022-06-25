@@ -7,32 +7,33 @@ import HeaderShape from 'components/Svg/HeaderShape'
 import Gallery from "assets/images/galley.jpg";
 import BasketMenu from "./basketmenu";
 import Search from "assets/images/search.svg";
+import { useRef, useEffect } from 'react';
 
 import './style.scss'
 
 
 
 function Header() {
+  const searchRef = useRef();
+  const inputSearchRef = useRef();
+  const btnSearchRef = useRef();
 
   const onClickShowSearch = () => {
-    document.getElementById("search").style.display = 'flex'
-    const input = document.getElementById("input-search");
-    input.focus();
-    // document.getElementById("sub-actions").style.display = 'none'
+    searchRef.current.style.display = 'flex'
+    inputSearchRef.current.focus();
   }
 
   const onClickHideSearch = () => {
-    // document.getElementById("sub-actions").style.display = 'flex'
-    document.getElementById("search").style.display = 'none'
-    document.getElementById("input-search").value = ''
-    const btn = document.getElementById('btn-search');
+    searchRef.current.style.display = 'none'
+    inputSearchRef.current.value = ''
+    const btn = btnSearchRef.current;
     btn.style.backgroundColor='#e8e8e8'
     btn.style.color='#B9B9B9'
     btn.style.cursor='not-allowed'
   }
 
   const onChangeSearch = () => {
-   const btn = document.getElementById('btn-search');
+   const btn = btnSearchRef.current;
    btn.style.backgroundColor='#e0b0e9'
     btn.style.color='#ffffff'
     btn.style.cursor='pointer'
@@ -127,10 +128,10 @@ function Header() {
               </div>
 
             </div>
-            <div className="search" id="search">
+            <div className="search" ref={searchRef}>
               <i className="fa fa-close icon" aria-hidden="true" onClick={onClickHideSearch}></i>
-              <input id='input-search' className="input-search" type="text" placeholder="نام محصول یا دسته" onChange={onChangeSearch}/>
-              <div  id='btn-search' className="input-btn">جستجو</div>
+              <input ref={inputSearchRef} className="input-search" type="text" placeholder="نام محصول یا دسته" onChange={onChangeSearch}/>
+              <div  ref={btnSearchRef} className="input-btn">جستجو</div>
             </div>
           </div>
 
