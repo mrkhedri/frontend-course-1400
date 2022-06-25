@@ -1,0 +1,141 @@
+.open-menu {
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    //background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    .closebtn {
+      position: absolute;
+      right: 45px;
+      font-size: 40px;
+    }
+
+    a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    //margin-top: 30px;
+    .steps {
+      height: 100%;
+      width: auto;
+      display: flex;
+      justify-content: center;
+
+      .step{
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-between;
+        .micon {
+          font-size: 25px;
+          margin-bottom: 16px;
+        }
+
+      }
+      .line {
+        display: block;
+        float: right;
+        width: 95px;
+        height: 2px;
+        background: #E4E4E4;
+        margin-top: 12px;
+        border-radius: 5px;
+      }
+    }
+
+    .box-msg{
+      margin-top: 60px;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgb(31 45 61 / 16%);
+
+    }
+
+    .price{
+      display: flex;
+      justify-content: end;
+      margin: 30px 0 0;
+      .sub-price{
+      max-width: 400px;
+      min-width: 400px;
+      padding: 22px 0;
+      border-bottom: 1px solid #E4E4E4;
+      border-top: 1px solid #E4E4E4;
+
+
+      .price-title{
+        float: right;
+        color: var(--color-complement, #6B7C93);
+      }
+
+      .price-value{
+        float: left;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      }
+    }
+
+    .payment {
+      display: flex;
+      margin: 30px auto 0;
+      float: left;
+      background:  #e0b0e9;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+      .sabt{
+        padding: 12px 30px 12px 25px;
+        //font-size: large;
+
+      }
+      .arrow-icon{
+        padding: 12px 30px 12px 30px;
+      }
+    }
+  }
+
+
+  .overlay a:hover, .overlay a:focus {
+    color: #000000;
+  }
+
+
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  .open {
+    font-size: 30px;
+    cursor: pointer
+  }
+
+}
