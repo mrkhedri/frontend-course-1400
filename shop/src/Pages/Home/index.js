@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import Layout from 'components/Layout'
 import Slider from 'components/Slider'
 import Ads from 'components/Ads'
+import PurchaseList from "components/PurchaseList";
 import ad1 from 'assets/images/ad1.jpg'
 import ad2 from 'assets/images/ad2.jpg'
 import ad3 from 'assets/images/ad3.jpg'
@@ -14,11 +15,8 @@ import ad7 from 'assets/images/ad7.jpg'
 import ad8 from 'assets/images/ad8.jpg'
 import ad9 from 'assets/images/ad9.jpg'
 import ad10 from 'assets/images/ad10.jpg'
-import G1 from 'assets/images/galley1.jpg'
-import G2 from 'assets/images/galley2.jpg'
-import G3 from 'assets/images/g4.jpg'
-import G4 from 'assets/images/g5.jpeg'
-import Purchases from "../../components/purchase-cart/purchases";
+import G1 from 'assets/images/G1.jpg'
+import G2 from 'assets/images/G2.jpg'
 
 const list1 = [
 	{src: ad1, alt: 'ad1'}
@@ -34,16 +32,21 @@ const list2 = [
 	{src: ad8, alt: 'ad8'},
 	{src: ad9, alt: 'ad9'},
 ]
+
 const list3 = [
 	{src: ad10, alt: 'ad10'}
 ]
-const purchaseItems = [
-	{srcMain: G1, srcSec: G2, title: 'دستبند و انگشتر ', price: 20000},
-	{srcMain: G2, srcSec: G4, title: 'گردن آویز', price: 450},
-	{srcMain: G4, srcSec: G2, title: 'دستبند', price: 5000000},
-	{srcMain: G3, srcSec: G1, title: 'نیم ست', price: 3000},
-]
 
+const purchaseItems = [
+  {srcMain: G1, srcSec: G2, title: 'دستبند و انگشتر ', price: 20000},
+  {srcMain: G1, srcSec: G2, title: 'گردن آویز', price: 450},
+  {srcMain: G1, srcSec: G2, title: 'دستبند', price: 5000000},
+  {srcMain: G1, srcSec: G2, title: 'نیم ست', price: 3000},
+  {srcMain: G1, srcSec: G2, title: 'دستبند و انگشتر ', price: 20000},
+  {srcMain: G1, srcSec: G2, title: 'گردن آویز', price: 450},
+  {srcMain: G1, srcSec: G2, title: 'دستبند', price: 5000000},
+  {srcMain: G1, srcSec: G2, title: 'نیم ست', price: 3000},
+]
 
 function Home() {
 	return (
@@ -55,8 +58,11 @@ function Home() {
 			<Ads list={list2} columns={4}/>
 
 			<Ads list={list3} columns={1}/>
-			<Purchases list={purchaseItems}/>
+
+			<PurchaseList list={purchaseItems}/>
+
 			<div style={{height: 800}}>Home</div>
+
 			<Link to="about">Go to About</Link>
 		</Layout>
 	)

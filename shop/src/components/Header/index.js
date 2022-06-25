@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Container from '@mui/material/Container';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -6,12 +6,9 @@ import Container from '@mui/material/Container';
 import HeaderShape from 'components/Svg/HeaderShape'
 import Gallery from "assets/images/galley.jpg";
 import BasketMenu from "./basketmenu";
-import Search from "assets/images/search.svg";
-import { useRef, useEffect } from 'react';
+// import Search from "assets/images/search.svg";
 
 import './style.scss'
-
-
 
 function Header() {
   const searchRef = useRef();
@@ -26,10 +23,10 @@ function Header() {
   const onClickHideSearch = () => {
     searchRef.current.style.display = 'none'
     inputSearchRef.current.value = ''
-    const btn = btnSearchRef.current;
-    btn.style.backgroundColor='#e8e8e8'
-    btn.style.color='#B9B9B9'
-    btn.style.cursor='not-allowed'
+    const btnStyle = btnSearchRef.current.style;
+    btnStyle.backgroundColor='#e8e8e8'
+    btnStyle.color='#B9B9B9'
+    btnStyle.cursor='not-allowed'
   }
 
   const onChangeSearch = () => {
@@ -118,7 +115,7 @@ function Header() {
               {/*<img className="icon1" src={Search} alt=""/>*/}
               <div className="icons">
                 <i className="fa fa-search icon" aria-hidden="true" onClick={onClickShowSearch}/>
-                <BasketMenu/>
+                <BasketMenu />
               </div>
 
               <div>

@@ -1,0 +1,34 @@
+.cart-wrapper {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  flex: 0 0 25%;
+}
+
+.purchase-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.7s;
+  padding-top: 280px;
+}
+
+.button-sheet {
+  color: #282c34;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  transition: all 0.3s;
+
+  .purchase-button {
+    padding-top: 8px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+
+  }
+}

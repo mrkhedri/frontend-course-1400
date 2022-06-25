@@ -4,11 +4,11 @@ import './stylebasketmenu.scss'
 
 function BasketMenu() {
     function openNav() {
-        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("myNav").style.transform = "translateX(0)";
     }
 
     function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
+        document.getElementById("myNav").style.transform = "translateX(-100%)";
     }
 
     return (

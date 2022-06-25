@@ -9,13 +9,15 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					backgroundColor: '#e0b0e9',
-					minWidth: 'auto',
-					height: 50,
-					width: '74%',
 					fontWeight: "bold",
+          height: '45px',
+          lineHeight: '45px',
 					border: `unset`,
+          paddingRight: '30px',
+          paddingLeft: '30px',
 					color: '#fff',
 					borderRadius: 5,
+          boxShadow: '0 3px 6px rgb(0 0 0 / 5%), 0 1px 3px rgb(0 0 0 / 11%)',
 					'&:hover': {
 						backgroundColor: '#e0b0e9',
 						minWidth: 'auto',

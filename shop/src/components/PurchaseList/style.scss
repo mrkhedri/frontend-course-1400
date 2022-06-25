@@ -1,0 +1,13 @@
+.purchase-list {
+  .inner {
+    margin-right: -32px;
+    margin-left: -32px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 64px);
+  }
+}
+
+//.cart-wrapper {
+//  flex: 0 0 25%;
+//}
