@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 
 import HeaderShape from 'components/Svg/HeaderShape'
 import Gallery from "assets/images/galley.jpg";
+import BasketMenu from "./basketmenu";
 import Search from "assets/images/search.svg";
 
 import './style.scss'
@@ -15,12 +16,26 @@ function Header() {
 
   const onClickShowSearch = () => {
     document.getElementById("search").style.display = 'flex'
+    const input = document.getElementById("input-search");
+    input.focus();
     // document.getElementById("sub-actions").style.display = 'none'
   }
 
   const onClickHideSearch = () => {
     // document.getElementById("sub-actions").style.display = 'flex'
     document.getElementById("search").style.display = 'none'
+    document.getElementById("input-search").value = ''
+    const btn = document.getElementById('btn-search');
+    btn.style.backgroundColor='#e8e8e8'
+    btn.style.color='#B9B9B9'
+    btn.style.cursor='not-allowed'
+  }
+
+  const onChangeSearch = () => {
+   const btn = document.getElementById('btn-search');
+   btn.style.backgroundColor='#e0b0e9'
+    btn.style.color='#ffffff'
+    btn.style.cursor='pointer'
   }
 
   return (
@@ -102,8 +117,7 @@ function Header() {
               {/*<img className="icon1" src={Search} alt=""/>*/}
               <div className="icons">
                 <i className="fa fa-search icon" aria-hidden="true" onClick={onClickShowSearch}/>
-
-                <i className="fa fa-shopping-cart  icon" aria-hidden="true" />
+                <BasketMenu/>
               </div>
 
               <div>
@@ -115,8 +129,8 @@ function Header() {
             </div>
             <div className="search" id="search">
               <i className="fa fa-close icon" aria-hidden="true" onClick={onClickHideSearch}></i>
-              <input className="input-search" type="text"/>
-              <div className="input-btn">جستجو</div>
+              <input id='input-search' className="input-search" type="text" placeholder="نام محصول یا دسته" onChange={onChangeSearch}/>
+              <div  id='btn-search' className="input-btn">جستجو</div>
             </div>
           </div>
 

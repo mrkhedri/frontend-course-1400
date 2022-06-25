@@ -115,6 +115,7 @@
     }
 
   .icons{
+    display: flex;
     margin-left: 10px;
     .icon{
       margin: 10px;
@@ -137,10 +138,16 @@
     position: absolute;
     left: 0;
     background-color: #ffffff;
+    padding: 0 5px 0 5px;
 
     .input-search{
+      margin-right: 10px;
       outline: none;
       border: 0;
+
+      ::placeholder {
+        color: #3b3f47;
+      }
     }
     .input-btn{
       margin: 2px;
