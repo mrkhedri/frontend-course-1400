@@ -1,11 +1,32 @@
 import React from "react";
 import Container from "@mui/material/Container";
+import {Box, Typography} from "@mui/material";
 
 import './style.scss'
 
-function Slider({ list, columns }) {
+function Ads({ list, columns, title = "", hasAnimation = false }) {
+  const hasTitle = Boolean(title)
+
   return (
-    <div className="ads">
+    <div className={`ads ${hasAnimation ? 'has-animation' : null}`}>
+      {hasTitle ? (
+        <Container
+          maxWidth="lg"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center ',
+            justifyContent: 'center'
+          }}
+        >
+          <Box mt={3} width={'10%'} borderBottom={'2px solid #e0b0e9'}/>
+
+          <Typography sx={{ py: 2 }} variant={'h5'}>{title}</Typography>
+
+          <Box mb={3} width={'10%'} borderBottom={'1px solid #e0b0e9'}/>
+        </Container>
+      ) : null}
+
       <Container maxWidth="lg">
         <div className="inner">
           {list.length === 1
@@ -28,4 +49,4 @@ function Slider({ list, columns }) {
   )
 }
 
-export default Slider;
+export default Ads;

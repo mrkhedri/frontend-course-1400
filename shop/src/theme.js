@@ -24,15 +24,45 @@ const theme = createTheme({
 					}
 				}
 			},
-			// variants: [
-			// 	{
-			// 		props: {variant: "bold"},
-			// 		style: {
-			//
-			// 		}
-			// 	}
-			// ]
-		}
+		},
+    MuiAccordion:{
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+          margin: '5px 0',
+          boxShadow: '0 2px 10px rgb(31 45 61 / 16%)',
+          '&:before': {
+            display: 'none',
+          },
+          '&.Mui-expanded': {
+            margin: '5px 0',
+          },
+          '&:hover .MuiAccordionSummary-expandIconWrapper': {
+            backgroundColor: '#e0b0e9',
+          },
+          '&:hover .MuiAccordionSummary-expandIconWrapper svg': {
+            fill: '#fff',
+          }
+        }
+      }
+    },
+    MuiAccordionSummary:{
+      styleOverrides: {
+        expandIconWrapper: {
+          transition: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+          background: '#f1f3f5',
+          borderRadius: '50px',
+          padding: '2px',
+
+          '&.Mui-expanded': {
+            transform: 'none',
+          },
+          'svg': {
+            transition: 'fill 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+          }
+        }
+      }
+    }
 	},
 	breakpoints: {
 		values: {

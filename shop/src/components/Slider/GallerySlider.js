@@ -9,56 +9,56 @@ import {Box, Typography} from "@mui/material";
 SwiperCore.use([Virtual, Navigation, Pagination]);
 
 function GallerySlider({list}) {
-    const [setSwiperRef] = useState(null);
+  const [setSwiperRef] = useState(null);
 
-    return (
-        <div>
-        <Container
-            maxWidth="lg"
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center ',
-                justifyContent: 'center'
-            }}
-        >
-            <Box mt={3} width={'10%'} borderBottom={'2px solid #e0b0e9'}/>
+  return (
+    <div className="gallery-slider">
+      <Container
+        maxWidth="lg"
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center ',
+          justifyContent: 'center'
+        }}
+      >
+        <Box mt={3} width={'10%'} borderBottom={'2px solid #e0b0e9'}/>
 
-            <Typography sx={{py: 2}} variant={'h5'}>جدیدترین محصولات</Typography>
+        <Typography sx={{py: 2}} variant={'h5'}>جدیدترین محصولات</Typography>
 
-            <Box mb={3} width={'10%'} borderBottom={'1px solid #e0b0e9'}/>
-        </Container>
-        <Container maxWidth="lg">
-            <div className="inner">
-                <Swiper
+        <Box mb={3} width={'10%'} borderBottom={'1px solid #e0b0e9'}/>
+      </Container>
+      <Container maxWidth="lg">
+        <div className="inner">
+          <Swiper
 
-                    onSwiper={setSwiperRef}
-                    slidesPerView={4}
-                    centeredSlides={false}
-                    spaceBetween={0}
-                    navigation={true}
-                    virtual
-                >
+            onSwiper={setSwiperRef}
+            slidesPerView={4}
+            centeredSlides={false}
+            spaceBetween={0}
+            navigation={true}
+            virtual
+          >
 
-                    {list.map((item, index) => (
-                        <SwiperSlide key={item} virtualIndex={index}>
-                            <PurchaseCart
-                                key={index}
-                                srcMain={item.srcMain}
-                                srcSec={item.srcSec}
-                                title={item.title}
-                                price={item.price}
-                            />
+            {list.map((item, index) => (
+              <SwiperSlide key={item} virtualIndex={index}>
+                <PurchaseCart
+                  key={index}
+                  srcMain={item.srcMain}
+                  srcSec={item.srcSec}
+                  title={item.title}
+                  price={item.price}
+                />
 
-                        </SwiperSlide>
+              </SwiperSlide>
 
-                    ))}
+            ))}
 
-                </Swiper>
-            </div>
-        </Container>
+          </Swiper>
         </div>
-    );
+      </Container>
+    </div>
+  );
 }
 
 export default GallerySlider
