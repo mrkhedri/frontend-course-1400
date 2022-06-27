@@ -17,6 +17,7 @@ import ad9 from 'assets/images/ad9.jpg'
 import ad10 from 'assets/images/ad10.jpg'
 import G1 from 'assets/images/G1.jpg'
 import G2 from 'assets/images/G2.jpg'
+import GallerySlider from "../../components/Slider/GallerySlider";
 
 const list1 = [
 	{src: ad1, alt: 'ad1'}
@@ -60,6 +61,8 @@ function Home() {
 			<Ads list={list3} columns={1}/>
 
 			<PurchaseList list={purchaseItems}/>
+
+			<GallerySlider list={purchaseItems}/>
 
 			<div style={{height: 800}}>Home</div>
 
