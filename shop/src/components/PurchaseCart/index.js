@@ -1,11 +1,16 @@
 import React from "react";
-import {Box, Button, Link, Typography} from '@mui/material'
+import { useNavigate } from "react-router-dom";
+import { Box, Button, Link, Typography } from '@mui/material'
 
 import { toPersianNum, toPriceNum } from 'utils/numbers'
 
 import './style.scss'
 
-const PurchaseCart = ({ srcMain, srcSec, title, price }) => {
+const PurchaseCart = ({ srcMain, srcSec, title, price, slug }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => navigate(`/product/${slug}`);
+
 	return (
     <div className="cart-wrapper">
       <Link
@@ -29,7 +34,7 @@ const PurchaseCart = ({ srcMain, srcSec, title, price }) => {
           <Typography> <span>تومان</span> {toPriceNum(toPersianNum(price))}</Typography>
 
           <Box className='purchase-button'>
-            <Button>مشاهده و خرید</Button>
+            <Button onClick={handleClick}>مشاهده و خرید</Button>
           </Box>
         </Box>
       </Link>

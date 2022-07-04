@@ -3,18 +3,19 @@ import Container from '@mui/material/Container';
 import './stylebasketmenu.scss'
 
 function BasketMenu() {
-    function openNav() {
+    const openNav = () => {
         document.getElementById("myNav").style.transform = "translateX(0)";
     }
 
-    function closeNav() {
-        document.getElementById("myNav").style.transform = "translateX(-100%)";
+    const closeNav = e => {
+      e.preventDefault();
+      document.getElementById("myNav").style.transform = "translateX(-100%)";
     }
 
     return (
         <div className='open-menu'>
             <div id="myNav" className="overlay">
-                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                <a href="#" className="closebtn" onClick={closeNav}>&times;</a>
                 <Container className="overlay-content">
                     <div className='steps'>
                         <div className='step'>

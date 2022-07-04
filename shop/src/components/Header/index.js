@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Container from '@mui/material/Container';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -45,9 +46,9 @@ function Header() {
         <Container maxWidth="lg" className="header">
           <div className="right">
             <div className="logo">
-              <a href="#">
+              <Link to="/">
                 <img className="img" src={Gallery} alt=""/>
-              </a>
+              </Link>
             </div>
 
             <div className="main-menu">
