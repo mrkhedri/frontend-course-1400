@@ -1,8 +1,7 @@
 import React from "react";
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import SocialNetworkIcon from "components/SocialNetworkIcon";
 
 import './style.scss'
 
@@ -17,11 +16,9 @@ function Footer() {
         </div>
 
         <div className="left">
-          <Link href="https://www.instagram.com/sarmey.gallery/" target="_blank">
-            <IconButton color="secondary">
-              <InstagramIcon />
-            </IconButton>
-          </Link>
+          <SocialNetworkIcon link="https://www.instagram.com/sarmey.gallery/" color="secondary">
+            <InstagramIcon />
+          </SocialNetworkIcon>
         </div>
       </Container>
     </div>
