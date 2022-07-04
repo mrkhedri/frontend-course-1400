@@ -6,9 +6,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import Title from "components/title/Title";
 
 import './style.scss'
-import {Box} from "@mui/material";
 
 const list = [
   {
@@ -36,21 +36,7 @@ function Faq() {
 
   return (
     <div className="faq">
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center ',
-          justifyContent: 'center'
-        }}
-      >
-        <Box mt={3} width={'10%'} borderBottom={'2px solid #e0b0e9'}/>
-
-        <Typography sx={{py: 2}} variant={'h5'}>سوالات پرتکرار</Typography>
-
-        <Box mb={3} width={'10%'} borderBottom={'1px solid #e0b0e9'}/>
-      </Container>
+      <Title topic='سولات پرتکرار' />
 
       <Container maxWidth="lg" className="content">
         {list.map(item => (
