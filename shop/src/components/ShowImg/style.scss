@@ -1,0 +1,25 @@
+.pro-img {
+  width: 470px;
+  height: 470px;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+
+.zoom {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: none;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+
+  .zoomImg {
+    cursor: zoom-out;
+  }
+
+}

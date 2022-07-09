@@ -15,15 +15,6 @@ SwiperCore.use([Virtual, Navigation, Pagination]);
 function Index({ list, title }) {
   const [setSwiperRef] = useState(null);
 
-  const ShowDetail = (id) => {
-    window.open("product?id=" + id);
-    // const domContainer = document.getElementById('main');
-    // const root = ReactDOM.createRoot(domContainer);
-    // root.render(
-    //     <Product item={list[id]}/>
-    // )
-  }
-
   return (
     <div className="gallery-slider">
       <Title topic={title}/>

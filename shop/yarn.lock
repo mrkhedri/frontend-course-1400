@@ -1172,7 +1172,7 @@
   "resolved" "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.5.tgz"
   "version" "0.7.5"
 
-"@emotion/react@^11.0.0-rc.0", "@emotion/react@^11.4.1", "@emotion/react@^11.5.0", "@emotion/react@^11.9.3":
+"@emotion/react@^11.0.0-rc.0", "@emotion/react@^11.4.1", "@emotion/react@^11.5.0", "@emotion/react@^11.9.0":
   "integrity" "sha512-g9Q1GcTOlzOEjqwuLF/Zd9LC+4FljjPjDfxSM7KmEakm+hsHXk+bYZ2q+/hTJzr0OUNkujo72pXLQvXj6H+GJQ=="
   "resolved" "https://registry.npmjs.org/@emotion/react/-/react-11.9.3.tgz"
   "version" "11.9.3"
@@ -1201,7 +1201,7 @@
   "resolved" "https://registry.npmjs.org/@emotion/sheet/-/sheet-1.1.1.tgz"
   "version" "1.1.1"
 
-"@emotion/styled@^11.3.0", "@emotion/styled@^11.9.3":
+"@emotion/styled@^11.3.0", "@emotion/styled@^11.8.1":
   "integrity" "sha512-o3sBNwbtoVz9v7WB1/Y/AmXl69YHmei2mrVnK7JgyBJ//Rst5yqPZCecEJlMlJrFeWHp+ki/54uN265V2pEcXA=="
   "resolved" "https://registry.npmjs.org/@emotion/styled/-/styled-11.9.3.tgz"
   "version" "11.9.3"
@@ -1268,7 +1268,7 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.1.1"
 
-"@fortawesome/react-fontawesome@^0.1.1":
+"@fortawesome/react-fontawesome@^0.1.18":
   "integrity" "sha512-RwLIB4TZw0M9gvy5u+TusAA0afbwM4JQIimNH/j3ygd6aIvYPQLqXMhC9ErY26J23rDPyDZldIfPq/HpTTJ/tQ=="
   "resolved" "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.18.tgz"
   "version" "0.1.18"
@@ -1518,7 +1518,7 @@
   dependencies:
     "@babel/runtime" "^7.17.2"
 
-"@mui/material@^5.0.0", "@mui/material@^5.8.6":
+"@mui/material@^5.0.0", "@mui/material@^5.8.3":
   "integrity" "sha512-9fo5AiNHs+HY5ArMzsDMFrAmJSRw90y/qu81oDIszgK7Bfrm8GuI7Eb0mO6WADWPEyKOzOov/WZsm4G6jPEM4g=="
   "resolved" "https://registry.npmjs.org/@mui/material/-/material-5.8.6.tgz"
   "version" "5.8.6"
@@ -7367,7 +7367,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.6.0", "react-dom@>=16.8":
+"react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.0.0", "react-dom@>=16.6.0", "react-dom@>=16.8":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -7400,7 +7400,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   "version" "0.11.0"
 
-"react-router-dom@6.3.0":
+"react-router-dom@6":
   "integrity" "sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw=="
   "resolved" "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.3.0.tgz"
   "version" "6.3.0"
@@ -8345,7 +8345,7 @@
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
 
-"swiper@^8.2.6":
+"swiper@^8.2.4":
   "integrity" "sha512-qo0E9GpcZpJer+vYXRd3CANDfFZTmUeyeIjmyi7fwuc5ozhAs1MCLgMSpZn393ZBgK7VIXA40YnQcAyJX3kjzw=="
   "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.2.6.tgz"
   "version" "8.2.6"
