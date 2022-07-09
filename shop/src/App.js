@@ -17,9 +17,10 @@ import './App.scss';
 import 'styles/font-awesome.css'
 
 function App() {
-  const [ids,setIds] = useState([])
+  const [basketList, setBasketList] = useState([])
+
   return (
-    <UserContext.Provider value={{ids,setIds}}>
+    <UserContext.Provider value={{ basketList, setBasketList }}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
 

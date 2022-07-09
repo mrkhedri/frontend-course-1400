@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect, useCallback} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 import Button from "@mui/material/Button";
 import MenuItem from '@mui/material/MenuItem';
@@ -21,10 +21,9 @@ import {purchaseItems as list} from 'Pages/Home'
 import './style.scss'
 
 function Product() {
-  const {ids,setIds} = React.useContext(UserContext);
+  const { basketList, setBasketList } = useContext(UserContext);
 
-
-  const {slug} = useParams();
+  const { slug } = useParams();
   const [num, setNum] = useState(null);
 
   const item = list.find(p => p.slug === slug)
@@ -36,13 +35,26 @@ function Product() {
   const handleChange = event => setNum(event.target.value)
 
   const handleAddToBasket = () => {
-    const updateArray = [...ids];
-    updateArray.push(item.id)
+    if (basketList.some(p => p.id === item.id)) {
+      const updateArray = basketList.map(p => {
+        if (p.id === item.id) {
+          return { ...p, count: p.count + 1 }
+        }
+        return p
+      })
 
-    setIds(updateArray)
+      setBasketList(updateArray)
+    } else {
+      const updateArray = [...basketList];
+
+      updateArray.push({ ...item, count: 1 })
+      setBasketList(updateArray)
+    }
   }
-  return (
 
+  console.log('basketList -> ', basketList)
+
+  return (
     <Layout>
       <Container maxWidth="lg" className="parent">
 

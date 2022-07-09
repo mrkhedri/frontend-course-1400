@@ -111,8 +111,6 @@ function Header() {
 
           <div className="actions">
             <div className="sub-action" id="sub-actions">
-
-
               {/*<img className="icon1" src={Search} alt=""/>*/}
               <div className="icons">
                 <i className="fa fa-search icon" aria-hidden="true" onClick={onClickShowSearch}/>
@@ -124,7 +122,6 @@ function Header() {
                 <span>  |  </span>
                 <span className="sign">وارد شوید </span>
               </div>
-
             </div>
             <div className="search" ref={searchRef}>
               <i className="fa fa-close icon" aria-hidden="true" onClick={onClickHideSearch}></i>
@@ -134,7 +131,6 @@ function Header() {
           </div>
 
         </Container>
-
       </div>
     </div>
   )

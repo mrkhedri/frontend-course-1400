@@ -1,14 +1,14 @@
 import React from "react";
 import Container from '@mui/material/Container';
 
-import Card from "components/Card";
+import BasketProductsList from "components/BasketProductsList";
 import UserContext from "context/UserContext";
 
 import './stylebasketmenu.scss'
 import {toPersianNum} from "../../utils/numbers";
 
 function BasketMenu() {
-  const {ids, setIds} = React.useContext(UserContext);
+  const { basketList } = React.useContext(UserContext);
 
   const openNav = () => {
     document.getElementById("myNav").style.transform = "translateX(0)";
@@ -45,24 +45,33 @@ function BasketMenu() {
               <div>پایان خرید</div>
             </div>
           </div>
+
           {/*<div className='box-msg'>محصولی در سبد خرید وجود ندارد</div>*/}
-          <Card/>
+
+          <BasketProductsList />
+
           <div className='price'>
             <div className='sub-price'>
               <div className='price-title'>مبلغ کل سبد خرید:</div>
               <div className='price-value'>0 تومان</div>
             </div>
           </div>
+
           <div className='payment'>
             <div className='sabt'>ثبت سفارش</div>
-            <i className="fa fa-arrow-left arrow-icon"></i>
+            <i className="fa fa-arrow-left arrow-icon" />
           </div>
         </Container>
       </div>
+
       <div className="basketIcon">
-        {ids.length!==0 ? <div className="badge">
-          {toPersianNum(ids.length)}
-        </div> : <div className="emp-badge"></div> }
+        {basketList.length ? (
+          <div className="badge">
+            {toPersianNum(basketList.length)}
+          </div>
+        ) : (
+          <div className="emp-badge" />
+        )}
 
         <i className="fa fa-shopping-cart icon open" aria-hidden="true" onClick={openNav}/>
       </div>

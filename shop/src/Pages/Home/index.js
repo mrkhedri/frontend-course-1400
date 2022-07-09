@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 
 import Layout from 'components/Layout'
@@ -51,17 +51,28 @@ const list5 = [
 ]
 
 export const purchaseItems = [
-  {id: 0, slug: 'bracelets-and-rings', srcMain: G1, srcSec: G2, title: 'دستبند و انگشتر ', price: 20000, defaultSize: 20},
-  {id: 1, slug: 'rings', srcMain: G1, srcSec: G2, title: 'انگشتر', price: 450},
-  {id: 2, slug: 'bracelets', srcMain: G1, srcSec: G2, title: 'دستبند', price: 5000000},
-  {id: 3, slug: 'product-test-1', srcMain: G1, srcSec: G2, title: 'نیم ست', price: 3000},
-  {id: 4, slug: 'product-test-2', srcMain: G1, srcSec: G2, title: 'دستبند و انگشتر ', price: 20000, defaultSize: 20},
-  {id: 5, slug: 'product-test-3', srcMain: G1, srcSec: G2, title: 'گردن آویز', price: 450},
-  {id: 6, slug: 'product-test-4', srcMain: G1, srcSec: G2, title: 'دستبند', price: 5000000},
-  {id: 7, slug: 'product-test-5', srcMain: G1, srcSec: G2, title: 'نیم ست', price: 3000},
+  {id: 0, slug: 'bracelets-and-rings', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'دستبند و انگشتر ', price: 20000, defaultSize: 20},
+  {id: 1, slug: 'rings', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'انگشتر', price: 450, defaultSize: 10},
+  {id: 2, slug: 'bracelets', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'دستبند', price: 5000000},
+  {id: 3, slug: 'product-test-1', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'نیم ست', price: 3000},
+  {id: 4, slug: 'product-test-2', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'دستبند و انگشتر ', price: 20000, defaultSize: 20},
+  {id: 5, slug: 'product-test-3', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'گردن آویز', price: 450},
+  {id: 6, slug: 'product-test-4', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'دستبند', price: 5000000},
+  {id: 7, slug: 'product-test-5', srcMain: 'https://sarmeydesign.com/uploads/image/rootimage/3224/c81e728d9d4c2f636f067f89cc14862c.jpg?w=800&h=800', srcSec: 'https://sarmeydesign.com/uploads/image/rootimage/1776/9fdd00e5a7644e2a9cab14048d2e1583.jpg?w=800&h=800', title: 'نیم ست', price: 3000}
 ]
 
 function Home() {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    fetch('https://5dea5a130710f80014210282.mockapi.io/product')
+      .then(res => res.json())
+      .then(data => setProducts(data))
+      .catch(error => console.log('error -> ', error));
+  }, [])
+
+  console.log('products -> ', products)
+
   return (
     <Layout>
       <Slider/>
@@ -72,9 +83,9 @@ function Home() {
 
       <Ads list={list3} columns={1}/>
 
-      <PurchaseList list={purchaseItems}/>
+      <PurchaseList list={products}/>
 
-      <ProductSlider list={purchaseItems} title='جدیدترین محصولات'/>
+      <ProductSlider list={products} title='جدیدترین محصولات'/>
 
       <Ads list={list5} columns={1}/>
 
