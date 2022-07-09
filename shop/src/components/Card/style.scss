@@ -1,0 +1,29 @@
+.cl1 {
+  margin-top: 60px;
+  .cl2 {
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgb(31 45 61 / 16%);
+  }
+.cl3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgb(31 45 61 / 16%);
+  //background-color: #4A9FF9;
+  margin-bottom: 6px;
+  &:hover {
+    transform: scale(1.01);
+  }
+  .img{
+    width: 60px;
+    height: auto;
+    margin: 5px;
+
+  }
+}
+}

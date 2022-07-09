@@ -1,24 +1,8 @@
-.zoom{
-  padding-top: 16px;
-  display: none;
-  justify-content: center;
-  transition: 1s;
-  .zoomImg {
-    cursor: zoom-out;
-  }
-}
 
 .parent {
   display: flex !important;
   padding: 0 !important;
   margin-bottom: 16px;
-
-  .pro-img {
-    width: 470px;
-    height: 470px;
-    border-radius: 10px;
-    cursor: zoom-in;
-  }
 
   .left {
     display: flex;
