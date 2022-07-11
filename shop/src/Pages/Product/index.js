@@ -52,7 +52,7 @@ function Product() {
     }
   }
 
-  console.log('basketList -> ', basketList)
+  console.log('basketList -> ', basketList.reduce((total,item)=> total+(item.price * item.count) ,0))
 
   return (
     <Layout>

@@ -8,7 +8,23 @@ import {purchaseItems as list} from 'Pages/Home'
 import "./style.scss"
 
 function BasketProductsList() {
-  const { basketList, setBasketList } = React.useContext(UserContext);
+  const {basketList, setBasketList} = React.useContext(UserContext);
+  const handleDeletItem = (e, index) => {
+    basketList.splice(index, 1);
+    setBasketList([...basketList]);
+  }
+
+  const handlePlusCount = (e, index) => {
+    if (basketList[index].count < 5)
+      basketList[index].count++;
+    setBasketList([...basketList]);
+  }
+
+  const handleMinusCount = (e, index) => {
+    if (--basketList[index].count < 1)
+      handleDeletItem(e, index)
+    setBasketList([...basketList]);
+  }
 
   return (
     <div className="cl1">
@@ -21,9 +37,22 @@ function BasketProductsList() {
               <img className="img" src={item.srcMain} alt=""/>
               <div>{item.title}</div>
               <div>{toPriceNum(toPersianNum(item.price))}</div>
-              <div>{toPersianNum(item.count)}</div>
+              <div className="count">
+                <i className="fa fa-plus countIcon" aria-hidden="true" onClick={(e) => {
+                  handlePlusCount(e, index)
+                }}/>
+                <div>{toPersianNum(item.count)}</div>
+                {/*<input type="number" value="1"  />*/}
+                <i className="fa fa-minus countIcon" aria-hidden="true" onClick={(e) => {
+                  handleMinusCount(e, index)
+                }}/>
+
+              </div>
               <div>{toPriceNum(toPersianNum((item.price) * (item.count)))}</div>
-              <DeleteIcon />
+              {/*<DeleteIcon />*/}
+              <i className="fa fa-remove icon open" aria-hidden="true" onClick={(e) => {
+                handleDeletItem(e, index)
+              }}/>
             </div>
           ))}
         </div>

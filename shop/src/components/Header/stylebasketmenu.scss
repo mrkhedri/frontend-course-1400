@@ -93,9 +93,13 @@
         }
 
         .price-value {
+          display: flex;
           float: left;
           font-weight: bold;
           font-size: 18px;
+          .currency {
+            padding-right: 6px;
+          }
         }
       }
     }
