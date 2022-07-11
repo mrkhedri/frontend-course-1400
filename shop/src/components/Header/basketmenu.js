@@ -5,7 +5,7 @@ import BasketProductsList from "components/BasketProductsList";
 import UserContext from "context/UserContext";
 
 import './stylebasketmenu.scss'
-import {toPersianNum} from "../../utils/numbers";
+import {toPersianNum, toPriceNum} from "../../utils/numbers";
 
 function BasketMenu() {
   const { basketList } = React.useContext(UserContext);
@@ -53,7 +53,10 @@ function BasketMenu() {
           <div className='price'>
             <div className='sub-price'>
               <div className='price-title'>مبلغ کل سبد خرید:</div>
-              <div className='price-value'>0 تومان</div>
+              <div className='price-value'>
+                {toPriceNum(toPersianNum(basketList.reduce((total,item)=> total+(item.price * item.count) ,0)))}
+              <div className="currency"> تومان </div>
+              </div>
             </div>
           </div>
 
