@@ -32,8 +32,6 @@ function Faq() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  console.log('expanded -> ', expanded)
-
   return (
     <div className="faq">
       <Title topic='سولات پرتکرار' />

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import axios from "axios";
 import {useParams} from 'react-router-dom';
 import Button from "@mui/material/Button";
 import MenuItem from '@mui/material/MenuItem';
@@ -16,21 +17,33 @@ import SocialNetworkIcon from "components/SocialNetworkIcon";
 import ProductSlider from "components/ProductSlider";
 import ShowImg from "components/ShowImg";
 import {toPersianNum, toPriceNum} from "utils/numbers";
-import {purchaseItems as list} from 'Pages/Home'
 
 import './style.scss'
 
 function Product() {
+  const { id } = useParams();
+  const [item, setItem] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [num, setNum] = useState(null);
   const { basketList, setBasketList } = useContext(UserContext);
 
-  const { slug } = useParams();
-  const [num, setNum] = useState(null);
-
-  const item = list.find(p => p.slug === slug)
+  useEffect(() => {
+    axios.get('/product')
+      .then(res => setProducts(res.data))
+      .catch(error => console.log('error -> ', error));
+  }, [])
 
   useEffect(() => {
-    setNum(item.defaultSize)
-  }, [slug]);
+    axios.get(`/product/${id}`)
+      .then(res => setItem(res.data))
+      .catch(error => console.log('error -> ', error));
+  }, [id])
+
+  useEffect(() => {
+    if (item) {
+      setNum(item.defaultSize)
+    }
+  }, [id]);
 
   const handleChange = event => setNum(event.target.value)
 
@@ -52,7 +65,9 @@ function Product() {
     }
   }
 
-  console.log('basketList -> ', basketList.reduce((total,item)=> total+(item.price * item.count) ,0))
+  if (!item) {
+    return null
+  }
 
   return (
     <Layout>
@@ -130,7 +145,7 @@ function Product() {
         </div>
       </Container>
 
-      <ProductSlider list={list} title="محصولات مرتبط"/>
+      <ProductSlider list={products} title="محصولات مرتبط"/>
     </Layout>
   )
 }

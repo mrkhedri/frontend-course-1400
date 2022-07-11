@@ -6,10 +6,10 @@ import { toPersianNum, toPriceNum } from 'utils/numbers'
 
 import './style.scss'
 
-const PurchaseCart = ({ srcMain, srcSec, title, price, slug }) => {
+const PurchaseCart = ({ srcMain, srcSec, title, price, slug, id }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => navigate(`/product/${slug}`);
+  const handleClick = () => navigate(`/product/${id}/${slug}`);
 
 	return (
     <div className="cart-wrapper">

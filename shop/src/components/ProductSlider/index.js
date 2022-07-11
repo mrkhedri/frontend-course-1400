@@ -32,6 +32,7 @@ function Index({ list, title }) {
               <SwiperSlide key={item.id} virtualIndex={index}>
                 <PurchaseCart
                   key={index}
+                  id={item.id}
                   srcMain={item.srcMain}
                   srcSec={item.srcSec}
                   title={item.title}

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from 'axios'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {ThemeProvider} from '@mui/material/styles';
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,6 +17,8 @@ import theme from './theme';
 import './App.scss';
 import 'styles/font-awesome.css'
 
+axios.defaults.baseURL = 'https://5dea5a130710f80014210282.mockapi.io';
+
 function App() {
   const [basketList, setBasketList] = useState([])
 
@@ -30,7 +33,7 @@ function App() {
               <Route index element={<Home/>}/>
 
               <Route path="product">
-                <Route path=":slug" element={<Product/>}/>
+                <Route path=":id/:slug" element={<Product/>}/>
               </Route>
 
               <Route path="about" element={<About/>}/>

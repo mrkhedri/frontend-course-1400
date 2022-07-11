@@ -8,22 +8,37 @@ import {purchaseItems as list} from 'Pages/Home'
 import "./style.scss"
 
 function BasketProductsList() {
-  const {basketList, setBasketList} = React.useContext(UserContext);
-  const handleDeletItem = (e, index) => {
-    basketList.splice(index, 1);
-    setBasketList([...basketList]);
+  const { basketList, setBasketList } = React.useContext(UserContext);
+
+  const handleDeleteItem = id => {
+    const item = basketList.find(p => p.id === id)
+
+    const newBasketList = basketList.filter(p => p.id !== id)
+
+    setBasketList(newBasketList);
   }
 
-  const handlePlusCount = (e, index) => {
-    if (basketList[index].count < 5)
-      basketList[index].count++;
-    setBasketList([...basketList]);
-  }
+  const handleCount = (id, type) => {
+    const item = basketList.find(p => p.id === id)
+    const isPlus = type === 'plus'
 
-  const handleMinusCount = (e, index) => {
-    if (--basketList[index].count < 1)
-      handleDeletItem(e, index)
-    setBasketList([...basketList]);
+    if (item.count === 5 && type === 'plus') return
+
+    if (item.count === 1 && type === 'minus') {
+      const text = "آیا میخواهید این محصول حذف شود؟"
+      if (window.confirm(text)) handleDeleteItem(id)
+      return
+    }
+
+    const newBasketList = basketList.map(p => {
+      if (p.id === id) {
+        const count = isPlus ? p.count + 1 : p.count - 1
+        return { ...p, count }
+      }
+      return p
+    })
+
+    setBasketList(newBasketList);
   }
 
   return (
@@ -38,21 +53,15 @@ function BasketProductsList() {
               <div>{item.title}</div>
               <div>{toPriceNum(toPersianNum(item.price))}</div>
               <div className="count">
-                <i className="fa fa-plus countIcon" aria-hidden="true" onClick={(e) => {
-                  handlePlusCount(e, index)
-                }}/>
+                <i className="fa fa-plus countIcon" aria-hidden="true" onClick={() => handleCount(item.id, 'plus')}/>
                 <div>{toPersianNum(item.count)}</div>
                 {/*<input type="number" value="1"  />*/}
-                <i className="fa fa-minus countIcon" aria-hidden="true" onClick={(e) => {
-                  handleMinusCount(e, index)
-                }}/>
+                <i className="fa fa-minus countIcon" aria-hidden="true" onClick={() => handleCount(item.id, 'minus')}/>
 
               </div>
               <div>{toPriceNum(toPersianNum((item.price) * (item.count)))}</div>
               {/*<DeleteIcon />*/}
-              <i className="fa fa-remove icon open" aria-hidden="true" onClick={(e) => {
-                handleDeletItem(e, index)
-              }}/>
+              <i className="fa fa-remove icon open" aria-hidden="true" onClick={() => handleDeleteItem(item.id)}/>
             </div>
           ))}
         </div>
